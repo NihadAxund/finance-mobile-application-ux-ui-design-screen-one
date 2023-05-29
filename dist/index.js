@@ -16,10 +16,8 @@ document.querySelector(".login").addEventListener("click", function() {
           console.log(response);
         },
         error: function(ex) {
-          // Hata durumunda işlemler
           var value = ex.responseText
-          alert(value)
-          if(value=="null"){
+          if(value=="null"||value==null){
             alert("No User");
           }
           else{
